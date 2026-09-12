@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8drbos167vf8"]
+[gd_scene format=3 uid="uid://b8drbos167vf8"]
 
-[ext_resource type="Script" path="res://Player/Head.gd" id="1_enjfg"]
+[ext_resource type="Script" uid="uid://bsw8c4y6ylwl4" path="res://Player/Head.gd" id="1_enjfg"]
+[ext_resource type="Script" uid="uid://2n8jeeuate2c" path="res://Player/Torch.gd" id="2_irtxf"]
 
-[node name="Head" type="Node3D"]
+[node name="Head" type="Node3D" unique_id=1688344198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64, 0)
-script = ExtResource( "1_enjfg" )
+script = ExtResource("1_enjfg")
 
-[node name="Camera" type="Camera3D" parent="."]
+[node name="Camera" type="Camera3D" parent="." unique_id=1991767998]
 current = true
+
+[node name="Torch" type="SpotLight3D" parent="Camera" unique_id=1115736404]
+light_color = Color(1, 0.627451, 0.23529412, 1)
+light_energy = 2.045
+spot_range = 8.41
+spot_attenuation = -0.31
+spot_angle = 39.89
+script = ExtResource("2_irtxf")
