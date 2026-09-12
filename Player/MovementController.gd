@@ -15,6 +15,10 @@ var input_axis := Vector2()
 		* gravity_multiplier)
 
 
+func _ready() -> void:
+	add_to_group(&"player")
+
+
 # Called every physics tick. 'delta' is constant
 func _physics_process(delta: float) -> void:
 	input_axis = Input.get_vector(&"move_back", &"move_forward",

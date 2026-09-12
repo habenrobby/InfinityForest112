@@ -19,6 +19,10 @@ run/main_scene="res://Levels/Main/L_Main.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.png"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_forward={
